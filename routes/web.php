@@ -5,6 +5,7 @@ use App\Http\Controllers\GuruController;
 use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\NilaiFerdiController;
+use App\Http\Controllers\NilaiDilaController;
 use App\Http\Controllers\PelajaranController;
 use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Route;
@@ -61,5 +62,8 @@ Route::group(['middleware' => 'auth'], function (){
 
     Route::get('nilai', [NilaiFerdiController::class, 'index'])->name('nilai.index');
     Route::get('cetak_nilai', [NilaiFerdiController::class, 'cetak_nilai'])->name('cetak_nilai');
+    
+    Route::get('nilai', [NilaiDilaController::class, 'index'])->name('nilai.index');
+    Route::get('cetak_nilai', [NilaiDilaController::class, 'cetak_nilai'])->name('cetak_nilai');
     
 });

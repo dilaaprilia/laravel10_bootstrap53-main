@@ -3,17 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\NilaiFerdi;
+use App\Models\NilaiDila;
 use Illuminate\Http\Request;
 
-class NilaiFerdiController extends Controller
+class NilaiDilaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $nilai = NilaiFerdi::get();      
-        return view('nilaiferdi.index', compact('nilai'));
+        $nilai = NilaiDila::get();      
+        return view('nilaidila.index', compact('nilai'));
     }
 
     /**
@@ -65,7 +66,7 @@ class NilaiFerdiController extends Controller
     }
 
     public function cetak_nilai(){
-        $nilaii = NilaiFerdi::get();
-        return view ('nilaiferdi.cetak_nilai', compact('nilaii'));
+        $nilaii = NilaiDila::get();
+        return view ('nilaidila.cetak_nilai', compact('nilaii'));
     }
 }

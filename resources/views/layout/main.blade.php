@@ -46,6 +46,10 @@
                 <i class="fas fa-clipboard-list"></i> Jadwal</a>
                 </li>
 
+                <!-- <li class="nav-item">
+                <a class="nav-link {{ request()->segment('1') =='nilai'  ? 'active' : '' }}" aria-current="page" href="{{ route('nilai.index') }}">
+                <i class="fa-solid fa-layer-group"></i> Nilai</a>
+                </li> -->
                 <li class="nav-item">
                 <a class="nav-link {{ request()->segment('1') =='nilai'  ? 'active' : '' }}" aria-current="page" href="{{ route('nilai.index') }}">
                 <i class="fa-solid fa-layer-group"></i> Nilai</a>
